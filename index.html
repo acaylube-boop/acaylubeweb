@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Acay Lube - Lubricación Automática de Cadenas</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&family=Poppins:wght@600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+   <header>
+    <div class="container header-flex">
+      <a href="#inicio" class="logo-img">
+         <img src="images/logohd.png" alt="Acay Lube Logo" style="height:48px;">
+      </a>
+      <span class="menu-toggle"><i class="fas fa-bars"></i></span>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#beneficios">Beneficios</a></li>
+          <li><a href="#especificaciones">Especificaciones</a></li>
+          <li><a href="#instalacion">Instalación</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <script>
+  const slides = document.querySelectorAll('.slide');
+  const prev = document.querySelector('.slider-controls .prev');
+  const next = document.querySelector('.slider-controls .next');
+  let current = 0;
+
+  function showSlide(idx) {
+    slides.forEach((s, i) => s.classList.toggle('active', i === idx));
+  }
+
+  function nextSlide() {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }
+
+  function prevSlide() {
+    current = (current - 1 + slides.length) % slides.length;
+    showSlide(current);
+  }
+
+  next.addEventListener('click', nextSlide);
+  prev.addEventListener('click', prevSlide);
+
+  // Auto-slide cada 5 segundos
+  setInterval(nextSlide, 5000);
+
+  showSlide(current);
+</script>
+
+ <section class="hero-slider" id="inicio">
+  <div class="slider">
+    <div class="slide active">
+      <img src="images/fotohd.png" alt="Acay Lube en moto">
+      <div class="slide-text">
+        <h1 class="hero-title">Acay Lube</h1>
+        <p class="hero-subtitle">Lubricación Automática para tu Moto</p>
+      </div>
+    </div>
+    <div class="slide">
+      <img src="images/otrafoto.png" alt="Otra foto">
+      <div class="slide-text">
+        <h1 class="hero-title">Protegé tu cadena</h1>
+        <p class="hero-subtitle">Más kilómetros, menos preocupaciones</p>
+      </div>
+    </div>
+    <div class="slider-controls">
+      <span class="prev">&#10094;</span>
+      <span class="next">&#10095;</span>
+    </div>
+  </div>
+</section>
+
+  <section class="about">
+    <div class="container">
+      <h2>¿Qué es Acay Lube?</h2>
+      <p>
+        Acay Lube es un innovador sistema desarrollado para lubricar de manera automática la cadena de la moto. El mismo está diseñado para proporcionar al conjunto cadena-corona-piñón una lubricación óptima de manera eficaz, simple de usar, fácil de instalar y confiable.
+      </p>
+    </div>
+  </section>
+
+  <section class="features" id="beneficios">
+    <div class="container">
+      <div class="feature">
+        <h3><i class="fa-solid fa-clock"></i> Autonomía y Memoria</h3>
+        <p>
+          El depósito de la unidad tiene capacidad de 50cc. Dependiendo del programa seleccionado brinda un rendimiento de entre 2.000 y más de 5.000 kilómetros. Conserva los valores de configuración incluso si se desconecta de la batería.
+        </p>
+      </div>
+      <div class="feature">
+        <h3><i class="fa-solid fa-bolt"></i> Acelerómetro de 3 Ejes</h3>
+        <p>
+          El acelerómetro integrado garantiza que la lubricación se realice únicamente cuando la moto está en movimiento, reduciendo consumo al mínimo en reposo.
+        </p>
+      </div>
+      <div class="feature">
+        <h3><i class="fa-solid fa-temperature-high"></i> Sensor de Temperatura</h3>
+        <p>
+          Ajusta automáticamente la dosificación de aceite según la temperatura ambiente, manteniendo un rendimiento óptimo en cualquier clima.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="details" id="especificaciones">
+    <div class="container">
+      <h2>Especificaciones Técnicas</h2>
+      <ul>
+        <li>Voltaje: 12V</li>
+        <li>Fusible: 3 Amp</li>
+        <li>Consumo en standby: &lt;1,5mA</li>
+        <li>Consumo máximo/promedio: &lt;120mA/12mA</li>
+        <li>Rango temperatura uso: 0°C a 60°C</li>
+        <li>Programas: 21 opciones (3 mapeos, 7 niveles)</li>
+        <li>Aceite recomendado: SAE 80W90</li>
+        <li>Depósito retroiluminado 50cc</li>
+      </ul>
+    </div>
+  </section>
+<section class="details" id="instalacion">
+  <div class="container">
+    <h2>Instalación Fácil</h2>
+    <p>
+      La instalación se realiza con conexión directa a la batería, sin cortar cables ni utilizar herramientas especiales. Incluye todos los elementos necesarios para montaje y fijación en diferentes puntos de la moto.
+    </p>
+  </div>
+</section>
+
+<footer id="contacto">
+  <div class="container">
+    <p>&copy; 2025 Acay Lube. Todos los derechos reservados.</p>
+    <p>
+      Consultas: 
+      <a href="mailto:acaylube@gmail.com" style="color:#ff6600; text-decoration:underline;">acaylube@gmail.com</a>
+      | <a href="tel:+541160415099" style="color:#ff6600; text-decoration:underline;">+54 11 6041-5099</a>
+    </p>
+    <div class="social">
+      <a href="https://instagram.com/acaylube" target="_blank"><i class="fab fa-instagram"></i> Instagram</a>
+      <a href="https://wa.me/541160415099" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</footer>
